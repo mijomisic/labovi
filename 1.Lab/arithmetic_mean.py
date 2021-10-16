@@ -27,7 +27,7 @@ def calculate_function(x, f):
 
 
 def main():
-    if raw_input("Is it for labs; [y]es [n]o?").strip() == 'y':
+    if raw_input("Is it for labs; [y]es [n]o? ").strip() == 'y':
         x = [24, 12, 7, 15, 4, 4, 9, 5]
         f = [17000, 6000, 6000, 1000, 5000, 2000, 3000, 1000]
     else:

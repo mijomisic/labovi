@@ -1,6 +1,8 @@
-import math
 from Tools.scripts.treesync import raw_input
-from numpy import log as ln
+
+
+def power(my_list):
+    return [x ** -1 for x in my_list]
 
 
 def my_function():
@@ -11,18 +13,17 @@ def my_function():
     return x
 
 
-def geometric_function(x):
-    g = math.exp(sum(ln(x)) / len(x))
-    return g
+def harmonic_mean(x):
+    f = power(x)
+    return (len(f)/sum(f))
 
 
 def main():
     if raw_input("Is it for labs; [y]es [n]o? ").strip() == 'y':
-        x = [331.1, 592.8, 649.7, 733.7, 849.3, 961.7, 1054.0, 1140.1, 1149.6, 1191.9, 1260.7, 1337.7, 1466.6, 1604.9,
-             1726.1]
+        x = [100, 120, 90, 70, 100, 90]
     else:
         x = my_function()
-    print(geometric_function(x))
+    print(harmonic_mean(x))
 
 
 if __name__ == "__main__":
