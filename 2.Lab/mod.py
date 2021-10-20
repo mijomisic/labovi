@@ -1,12 +1,10 @@
-from Tools.scripts.treesync import raw_input
-
 
 def sort_dict(a):
     return sorted(a.items(), key=lambda x: x[1], reverse=True)
 
 
 def assign_dictionary():
-    file_data = raw_input("Enter file name for data: ").strip()
+    file_data = input("Enter file name for data: ").strip()
     a = {}
     with open(file_data, "r") as f:
         for line in f:
@@ -20,7 +18,7 @@ def assign_dictionary():
 
 def main():
     d = {}
-    if raw_input("Is it for labs; [y]es [n]o? ").strip() == 'y':
+    if input("Is it for labs; [y]es [n]o? ").strip() == 'y':
         with open('data.txt', "r") as f:
             for line in f:
                 (key, val) = line.split()

@@ -1,12 +1,9 @@
-from Tools.scripts.treesync import raw_input
-
-
 def power(my_list):
     return [x ** -1 for x in my_list]
 
 
 def my_function():
-    file_data = raw_input("Enter file name for data: ").strip()
+    file_data = input("Enter file name for data: ").strip()
     with open(file_data, "r") as f:
         read_strings = f.read().splitlines()
         x = list(map(float, read_strings))
@@ -15,11 +12,11 @@ def my_function():
 
 def harmonic_mean(x):
     f = power(x)
-    return (len(f)/sum(f))
+    return len(f) / sum(f)
 
 
 def main():
-    if raw_input("Is it for labs; [y]es [n]o? ").strip() == 'y':
+    if input("Is it for labs; [y]es [n]o? ").strip() == 'y':
         x = [100, 120, 90, 70, 100, 90]
     else:
         x = my_function()

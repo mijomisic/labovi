@@ -1,12 +1,10 @@
-from Tools.scripts.treesync import raw_input
-
 
 def my_function():
-    file_data = raw_input("Enter file name for data: ").strip()
+    file_data = input("Enter file name for data: ").strip()
     with open(file_data, "r") as f:
         read_strings = f.read().splitlines()
         x = list(map(int, read_strings))
-    frequency_file = raw_input("Enter frequency file name: ").strip()
+    frequency_file = input("Enter frequency file name: ").strip()
     with open(frequency_file, "r") as g:
         read_strings = g.read().splitlines()
         f = list(map(int, read_strings))
@@ -27,7 +25,7 @@ def calculate_function(x, f):
 
 
 def main():
-    if raw_input("Is it for labs; [y]es [n]o? ").strip() == 'y':
+    if input("Is it for labs; [y]es [n]o? ").strip() == 'y':
         x = [24, 12, 7, 15, 4, 4, 9, 5]
         f = [17000, 6000, 6000, 1000, 5000, 2000, 3000, 1000]
     else:
